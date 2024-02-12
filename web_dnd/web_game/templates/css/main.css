@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+.backgr {
+  width: 100%;
+  height: 1024px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  overflow: hidden;
+}
+.game_field {
+  width: 100%;
+  height: 814px;
+  background: rgba(217,217,217,1);
+  opacity: 1;
+  position: absolute;
+  top: 210px;
+  right: 438px;
+  overflow: hidden;
+}
+.head_menu {
+  width: 100%;
+  height: 189px;
+  background: rgba(217,217,217,1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  right: 438px;
+  overflow: hidden;
+}
+.main_menu {
+  width: 418px;
+  height: 100%;
+  background: rgba(217,217,217,1);
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+.Menu_text {
+  width: 137px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 418px;
+  right: 0;
+  right: 278px;
+  font-family: Inter;
+  font-weight: Regular;
+  font-size: 50px;
+  opacity: 1;
+  text-align: left;
+}
+.textToDelete {
+  width: 411px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 688px;
+  left: 296px;
+  font-family: Inter;
+  font-weight: Regular;
+  font-size: 50px;
+  opacity: 1;
+  text-align: left;
+}
+.dnd {
+  width: 580px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 328px;
+  left: 211px;
+  font-family: Inter;
+  font-weight: Regular;
+  font-size: 50px;
+  opacity: 1;
+  text-align: left;
+}
