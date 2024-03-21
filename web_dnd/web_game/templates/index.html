@@ -11,19 +11,36 @@
          </div>
 
          <div class="game_field">
-            <button style="
-            font-size: 20pt;
-            padding: 10pt;
-            ">xdd</button>
+            <div class="grid">
+            </div>
+            <script src="./static/css/script.js"></script>
             <span class="someText">игровая область</span>
-            <!-- <div id="circle"></div>
-               <script src="script.js"></script> -->
          </div>
 
          <div class="main_menu">
+            <button
+            onclick="btn_check()"
+            style="
+            font-size: 20pt;
+            padding: 10pt;
+            ">xdd</button>
             <span class="someText">меню</span>
          </div>
       </div>
-      
+
+   <script>
+      function btn_check(){
+         var localhost = "http://127.0.0.1:8000/"
+         var btn = new XMLHttpRequest();
+         btn.open("GET",localhost)
+         btn.send("xdd")
+         // alert("Check correct");
+      }
+   </script>
+
+
+
+
+
    </body>
 </html>

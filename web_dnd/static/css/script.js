@@ -1,30 +1,24 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const circle = document.getElementById("circle");
-    let x = 0;
-    let y = 0;
-    const step = 10;
-  
-    function moveCircle(dx, dy) {
-      x += dx;
-      y += dy;
-      circle.style.left = x + "px";
-      circle.style.top = y + "px";
+  const grid = document.querySelector('.grid');
+
+  function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
     }
-  
-    document.addEventListener("keydown", function(event) {
-      switch(event.key) {
-        case "ArrowUp":
-          moveCircle(0, -step);
-          break;
-        case "ArrowDown":
-          moveCircle(0, step);
-          break;
-        case "ArrowLeft":
-          moveCircle(-step, 0);
-          break;
-        case "ArrowRight":
-          moveCircle(step, 0);
-          break;
-      }
-    });
+    return color;
+  }
+
+  for (let i = 0; i < 250; i++) {
+    const square = document.createElement("div");
+    square.classList.add("square");
+    square.style.backgroundColor = getRandomColor(); // Применяем цвет из массива colors
+    grid.appendChild(square);
+  }
+
+  grid.addEventListener('click', function(event) {
+    const clickedSquare = event.target;
+    clickedSquare.style.backgroundColor = getRandomColor();
   });
+});
