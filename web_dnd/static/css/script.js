@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", function() {
     return color;
   }
 
-  for (let i = 0; i < 250; i++) {
+  for (let i = 0; i < 275; i++) {
     const square = document.createElement("div");
     square.classList.add("square");
-    square.style.backgroundColor = getRandomColor(); // Применяем цвет из массива colors
+//    square.style.backgroundColor = getRandomColor(); // Применяем цвет из массива colors
     grid.appendChild(square);
   }
 
