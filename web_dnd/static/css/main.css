@@ -4,7 +4,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-size: 66px;
+  font-size: 10px;
   font-family: Montserrat;
   font-style: bold; /*подправить*/
 }
@@ -57,7 +57,7 @@ body {
 
 .grid {
   display: grid;
-  margin-top: 85pt;
+  margin-top: 0pt; /* 85 */
   grid-template-columns: repeat(auto-fill, 50px);
   grid-gap: 0;
   grid-auto-flow: row;
@@ -71,4 +71,8 @@ body {
   height: 50px;
   background-color: lightblue;
   border: 2px solid black;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  font-size: 15px;
 }
