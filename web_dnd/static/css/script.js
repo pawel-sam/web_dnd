@@ -40,16 +40,45 @@ document.addEventListener("DOMContentLoaded", function() {
     if (event.key === 'w' || event.key === 'W') {
         console.log('Клавиша "W" была нажата.');
         console.log(game_field[5][-12]);
-        for (let i = 5; i > 5-rows; i--) {
+       for (let i = 5; i > 5-rows; i--) {
             for (let j = -12; j < cols-12; j++) {
-            var idParts = game_field[i][j].id.split('_');
+            var idParts = game_field[i][j].id.split('_'); /*1_1_0_11, 1 = + ||| 0 = - */
             var y_id = parseInt(idParts[0], 10);
             var x_id = parseInt(idParts[1], 10);
             console.log(y_id, x_id);
             game_field[y_id][x_id].style.backgroundColor = "#6e2a00";
             }
         }
-/*        for (let y of game_field){
+
+
+/*   function createMap() {
+   map_h, map_w = 100, 80
+   map_padding = 0.1 // процент отступа от крайних значений карты
+   map_h_high, map_w_high = map_h * map_padding, map_w * map_padding *//*формула для нахождения верхих координат*//*
+   map_h_low, map_w_low = map_h - map_h_high, map_w - map_w_high *//*формула для нахождения нижних координат*//*
+   *//* переменная процента суши, не менее 80% + суша прилегает к суше *//*
+//        l, s, b, m = "land", "sea", "building", "map"
+        l, s, b, m = 'l', 's', 'b', 'm'
+        map = {
+         {1:[b, y, x, [h, w]],
+//         ...
+         2000000:[m, y, x, l],
+         }
+        }
+   }*/
+
+        /*def create home(y, x, h, w) (координаты(y, x), высота, ширина)*/
+        /*
+        mongoDB + Django сравнение
+        хранение данных
+        json
+        png –> svg
+        svg прицеплять к div через псевдоэлемент
+        */
+
+
+
+       /* for (let y of game_field){
             for (let x of y)
             var idParts = x.id.split('_');
             var y_id = parseInt(idParts[0], 10);
