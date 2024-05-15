@@ -1,0 +1,25 @@
+Index: web_dnd/static/css/script.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>document.addEventListener(\"DOMContentLoaded\", function() {\r\n    const grid = document.querySelector('.grid');\r\n\r\n    function getRandomColor() {\r\n            const letters = '0123456789ABCDEF';\r\n            let color = '#';\r\n            for (let i = 0; i < 6; i++) {\r\n            color += letters[Math.floor(Math.random() * 16)];\r\n        }\r\n        return color;\r\n    }\r\n\r\n  /*  function move(direction){\r\n\r\n    }*/\r\n\r\n    grid.addEventListener('click', function(event) {\r\n        const clickedSquare = event.target;\r\n        clickedSquare.style.backgroundColor = \"#0089bf\";\r\n    });\r\n\r\n    const rows = 11;\r\n    const cols = 25;\r\n    let game_field = [];\r\n    for (let i = 5; i > 5-rows; i--) {\r\n    game_field[i] = [];\r\n\r\n    for (let j = -12; j < cols-12; j++) {\r\n    const square = document.createElement(\"div\");\r\n    square.classList.add(\"square\");\r\n    square.id = `${i}_${j}`\r\n    square.textContent = `y= ${i} x= ${j}`;\r\n    grid.appendChild(square);\r\n    game_field[i][j] = square;\r\n        }\r\n    }\r\n    game_field[0][0].style.backgroundColor = \"red\"\r\n\r\n    document.addEventListener('keydown', function(event) {\r\n    if (event.key === 'w' || event.key === 'W') {\r\n        console.log('Клавиша \"W\" была нажата.');\r\n        console.log(game_field[5][-12]);\r\n       for (let i = 5; i > 5-rows; i--) {\r\n            for (let j = -12; j < cols-12; j++) {\r\n            var idParts = game_field[i][j].id.split('_'); /*1_1_0_11, 1 = + ||| 0 = - */\r\n            var y_id = parseInt(idParts[0], 10);\r\n            var x_id = parseInt(idParts[1], 10);\r\n            console.log(y_id, x_id);\r\n            game_field[y_id][x_id].style.backgroundColor = \"#6e2a00\";\r\n            }\r\n        }\r\n\r\n\r\n/*   function createMap() {\r\n   map_h, map_w = 100, 80\r\n   map_padding = 0.1 // процент отступа от крайних значений карты\r\n   map_h_high, map_w_high = map_h * map_padding, map_w * map_padding *//*формула для нахождения верхих координат*//*\r\n   map_h_low, map_w_low = map_h - map_h_high, map_w - map_w_high *//*формула для нахождения нижних координат*//*\r\n   *//* переменная процента суши, не менее 80% + суша прилегает к суше *//*\r\n//        l, s, b, m = \"land\", \"sea\", \"building\", \"map\"\r\n        l, s, b, m = 'l', 's', 'b', 'm'\r\n        map = {\r\n         {1:[b, y, x, [h, w]],\r\n//         ...\r\n         2000000:[m, y, x, l],\r\n         }\r\n        }\r\n   }*/\r\n\r\n        /*def create home(y, x, h, w) (координаты(y, x), высота, ширина)*/\r\n        /*\r\n        mongoDB + Django сравнение\r\n        хранение данных\r\n        json\r\n        png –> svg\r\n        svg прицеплять к div через псевдоэлемент\r\n        */\r\n\r\n\r\n\r\n       /* for (let y of game_field){\r\n            for (let x of y)\r\n            var idParts = x.id.split('_');\r\n            var y_id = parseInt(idParts[0], 10);\r\n            var x_id = parseInt(idParts[1], 10);\r\n            console.log(y_id, x_id)\r\n        }*/\r\n/*        for (let y of game_field) { // выводятся ячейки только с положительными значениями индексов\r\n            for (let x of y) {}}*/\r\n\r\n    }\r\n});\r\n});
+===================================================================
+diff --git a/web_dnd/static/css/script.js b/web_dnd/static/css/script.js
+--- a/web_dnd/static/css/script.js	
++++ b/web_dnd/static/css/script.js	
+@@ -51,12 +51,12 @@
+         }
+ 
+ 
+-/*   function createMap() {
++   /*function createMap() {
+    map_h, map_w = 100, 80
+    map_padding = 0.1 // процент отступа от крайних значений карты
+-   map_h_high, map_w_high = map_h * map_padding, map_w * map_padding *//*формула для нахождения верхих координат*//*
+-   map_h_low, map_w_low = map_h - map_h_high, map_w - map_w_high *//*формула для нахождения нижних координат*//*
+-   *//* переменная процента суши, не менее 80% + суша прилегает к суше *//*
++   map_h_high, map_w_high = map_h * map_padding, map_w * map_padding // формула для нахождения верхих координат
++   map_h_low, map_w_low = map_h - map_h_high, map_w - map_w_high // формула для нахождения нижних координат
++   // переменная процента суши, не менее 80% + суша прилегает к суше
+ //        l, s, b, m = "land", "sea", "building", "map"
+         l, s, b, m = 'l', 's', 'b', 'm'
+         map = {
