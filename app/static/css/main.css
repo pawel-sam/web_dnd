@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -8,6 +9,7 @@ body {
   font-family: Montserrat;
   font-style: bold; /*подправить*/
 }
+
 .backgr {
   background: rgb(255, 255, 255);
   opacity: 1;
@@ -75,4 +77,5 @@ body {
   align-items: center;
   text-align:center;
   font-size: 15px;
+  cursor: pointer;
 }
