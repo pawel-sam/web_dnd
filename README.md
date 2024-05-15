@@ -24,3 +24,9 @@ http://127.0.0.1:8000
 
 # админка:
 http://127.0.0.1:8000/admin
+
+# js-beautify
+https://beautifier.io
+
+# css-beautify
+https://www.freeformatter.com/css-beautifier.html#before-output

@@ -5,32 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78ef6f5a-3840-458b-8851-907c92510487" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_dnd/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_dnd/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_dnd/static/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_dnd/static/css/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_dnd/web_dnd/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_dnd/web_dnd/asgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_dnd/web_dnd/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_dnd/web_dnd/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_dnd/web_dnd/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_dnd/web_game/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_dnd/web_game/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_dnd/web_game/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_dnd/web_game/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_dnd/web_game/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_dnd/web_game/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_dnd/web_game/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_dnd/web_game/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
