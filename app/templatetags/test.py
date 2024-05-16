@@ -81,11 +81,11 @@ class Map():
 # create_land()
 # print_map('only_letter')
 
-# map = Map()
-# map.fill_water()
-# map.create_land()
+map = Map()
+map.fill_water()
+map.create_land()
 # print(map.print_map('only_letter'))
 # print(map.actual_map)
-# print(map.get_json())
+print(map.get_json())
 
 # print(round(12*0.1/2))
