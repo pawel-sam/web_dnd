@@ -1,3 +1,4 @@
+{% load app_tags %}
 <!DOCTYPE html>
 <html lang="ru">
    <head>
@@ -6,7 +7,6 @@
       <script src="../static/js/script.js"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
    </head>
-
    <body>
       <div class="backgr">
          <div class="head_menu">
@@ -18,18 +18,16 @@
             </div>
          </div>
          <div class="main_menu">
-            <button onclick="btn_check()" style="font-size: 20pt; padding: 10pt;">меню</button>
+            <button onclick='btn_check()' style="font-size: 20pt; padding: 10pt;">меню</button>
             <span class="someText">меню</span>
          </div>
       </div>
    </body>
 
+
    <script>
-      function btn_check(){
-         var localhost = "http://127.0.0.1:8000/"
-         var btn = new XMLHttpRequest();
-         btn.open("GET",localhost)
-         btn.send("меню")
-         alert("Check correct");}
+    function btn_check(){
+        alert(`{% create_map %}`); // пуш уведомление об успешном создании json карты в верхем каталоге приложения
+    }
    </script>
 </html>

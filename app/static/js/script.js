@@ -48,9 +48,12 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log(y_id, x_id);
             game_field[y_id][x_id].style.backgroundColor = "#6e2a00";
             }
-        }
+        }}});
 
-
+    function btn_check(){
+//        {% create_map %};
+        alert("Check correct");
+    }
 /*   function createMap() {
    map_h, map_w = 100, 80
    map_padding = 0.1 // процент отступа от крайних значений карты
@@ -88,6 +91,5 @@ document.addEventListener("DOMContentLoaded", function() {
 /*        for (let y of game_field) { // выводятся ячейки только с положительными значениями индексов
             for (let x of y) {}}*/
 
-    }
-});
+
 });
