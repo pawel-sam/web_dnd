@@ -1,3 +1,4 @@
+{% load app_tags %}
 <!DOCTYPE html>
 <html lang="ru">
    <head>
@@ -6,36 +7,27 @@
       <script src="../static/js/script.js"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
    </head>
-
    <body>
-      <div class="grid"></div>
-
-      <span class="toggle-button" onclick="toggleNav()">&#x2630;</span>
-
-      <div id="sidenav" class="main_menu">
-         <h1 id="Game">Подземелья и Приколы</h1>
-         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper lectus odio. Aliquam tempor gravida augue at tincidunt. Maecenas faucibus enim ac rhoncus consectetur. Vestibulum efficitur sem id lacus blandit congue. Donec vitae felis vel orci porttitor elementum vel id urna. Aliquam auctor quam a urna commodo, a pellentesque arcu efficitur. Mauris nec augue posuere, eleifend tellus nec, pharetra sapien. Quisque porttitor, mauris eget luctus cursus, nulla lacus feugiat diam, vel hendrerit nisi leo vitae lacus. Maecenas consectetur risus eros, et consectetur lorem commodo venenatis. Integer vitae dui dignissim lacus placerat accumsan. Vivamus quis lectus ut arcu accumsan lobortis sed non sem. Vivamus ac vestibulum nisl. Vestibulum luctus velit vitae enim fermentum, in laoreet augue tincidunt. Donec nunc dui, consectetur sit amet leo eu, egestas viverra orci. Pellentesque fermentum, nisi vitae cursus iaculis, diam odio sodales odio, sed efficitur turpis tellus vel felis. Pellentesque auctor urna ac mi vehicula elementum.</p>
+      <div class="backgr">
+         <div class="head_menu">
+            <span class="someText" id="Game">Подземелья и Приколы</span>
+         </div>
+         <div class="game_field">
+            <div class="someText">Игровая область</div>
+            <div class="grid">
+            </div>
+         </div>
+         <div class="main_menu">
+            <button onclick='btn_check()' style="font-size: 20pt; padding: 10pt;">меню</button>
+            <span class="someText">меню</span>
+         </div>
       </div>
    </body>
 
+
    <script>
-      var navToggled = true;
-      function toggleNav() {
-          if (navToggled) {
-              openNav();
-              navToggled = false;
-          } else {
-              closeNav();
-              navToggled = true;
-          }
-      }
-      function openNav() {
-          document.getElementById("sidenav").style.opacity = "1";
-          document.getElementById("sidenav").style.right = "0";
-      }
-      function closeNav() {
-          document.getElementById("sidenav").style.opacity = "0";
-          document.getElementById("sidenav").style.right = "-20%";
-      }
+    function btn_check(){
+        alert(`{% create_map %}`); // пуш уведомление об успешном создании json карты в верхем каталоге приложения
+    }
    </script>
 </html>
