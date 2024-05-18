@@ -1,9 +1,11 @@
+{% load app_tags %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
    <head>
       <title>Document</title>
-      <link href="../static/css/main.css" rel="stylesheet" />
-      <script src="../static/js/script.js"></script>
+      <link href="{% static 'css/main.css' %}" rel="stylesheet" />
+      <script src="{% static 'js/script.js' %}"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
    </head>
 
@@ -15,8 +17,9 @@
       <div id="sidenav" class="main_menu">
          <h1 id="Game">Подземелья и Приколы</h1>
          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper lectus odio. Aliquam tempor gravida augue at tincidunt. Maecenas faucibus enim ac rhoncus consectetur. Vestibulum efficitur sem id lacus blandit congue. Donec vitae felis vel orci porttitor elementum vel id urna. Aliquam auctor quam a urna commodo, a pellentesque arcu efficitur. Mauris nec augue posuere, eleifend tellus nec, pharetra sapien. Quisque porttitor, mauris eget luctus cursus, nulla lacus feugiat diam, vel hendrerit nisi leo vitae lacus. Maecenas consectetur risus eros, et consectetur lorem commodo venenatis. Integer vitae dui dignissim lacus placerat accumsan. Vivamus quis lectus ut arcu accumsan lobortis sed non sem. Vivamus ac vestibulum nisl. Vestibulum luctus velit vitae enim fermentum, in laoreet augue tincidunt. Donec nunc dui, consectetur sit amet leo eu, egestas viverra orci. Pellentesque fermentum, nisi vitae cursus iaculis, diam odio sodales odio, sed efficitur turpis tellus vel felis. Pellentesque auctor urna ac mi vehicula elementum.</p>
+         <button onclick='btn_check()' style="font-size: 20pt; padding: 10pt;">меню</button>
       </div>
-   </body>
+   </body>https://meet.google.com/cra-hwco-ras
 
    <script>
       var navToggled = true;
@@ -37,5 +40,17 @@
           document.getElementById("sidenav").style.opacity = "0";
           document.getElementById("sidenav").style.right = "-20%";
       }
+      function btn_check() {
+          alert(`{% create_map %}`); // пуш уведомление об успешном создании json карты в верхем каталоге приложения
+      }
+
+      var received_data = "{{datad|safe}}";
+      console.log(received_data);
    </script>
 </html>
+
+<!--
+https://www.reddit.com/r/djangolearning/comments/svnjce/read_static_json_file_from_python_or_javascript/
+https://stackoverflow.com/questions/74917741/in-django-is-it-possible-to-add-url-directory-instead-of-url-file
+https://codinggear.org/django-include-urls/
+-->

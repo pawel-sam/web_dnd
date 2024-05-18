@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
+
+    const rows = 28;
     const cols = 48;
-    const rows = 27;
 
     const grid = document.querySelector('.grid');
     grid.style.gridTemplateColumns = `repeat(${cols}, 50px)`
@@ -20,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    game_field[0][0].style.backgroundColor = "red"
+    game_field[0][0].style.backgroundColor = "#ff0000";
 
     grid.addEventListener('click', function(event) {
         const clickedSquare = event.target;
@@ -39,6 +40,11 @@ document.addEventListener("DOMContentLoaded", function() {
     /*  function move(direction){
 
     }*/
+
+//    function btn_check(){
+//        {% create_map %};
+//        alert("Check correct");
+//    }
 
     document.addEventListener('keydown', function(event) {
         if (event.key === 'w' || event.key === 'W') {
