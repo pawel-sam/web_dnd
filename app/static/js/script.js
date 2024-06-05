@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const cols = 48;
-    const rows = 27;
+    const rows = 28;
 
     const grid = document.querySelector('.grid');
     grid.style.gridTemplateColumns = `repeat(${cols}, 50px)`
@@ -20,7 +20,19 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    game_field[0][0].style.backgroundColor = "red"
+// попытка в считывание файла
+//    let reader = new FileReader();
+//    file = "/map.json"
+//    reader.readAsText(file);
+//    console.log(file);
+
+    // попытка в централизацию при загрузке сайта
+    MidHorScroll = document.body.offsetWidth / 4
+    MidVerScroll = document.body.offsetHeight / 4
+    document.documentElement.scrollTo(MidHorScroll, MidVerScroll);
+    console.log(document.body.offsetWidth - document.body.clientWidth)
+
+    game_field[0][0].style.backgroundColor = "lime"
 
     grid.addEventListener('click', function(event) {
         const clickedSquare = event.target;
